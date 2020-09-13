@@ -1,0 +1,168 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    width: 100%;
+    background-color: #002b80;
+    height: 50px;
+    font-family: 'Lucida Sans';
+}
+
+
+#combo-header-logo {
+    display: inline-block;
+    text-align: left;
+    float: left;
+}
+
+#combo-header-logo a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-family: 'Lucida Sans';
+    font-weight: bold;
+}
+
+#header-logo {
+    display: inline-block;
+    max-width: 75px;
+    max-height: 75px;
+    text-align: left;
+    float: left;
+}
+
+.menu {
+    /*característica geral do menu*/
+    width: 100%;
+    height: 50px;
+    background-color: #002b80;
+    font-family: 'Lucida Sans';
+}
+
+.menu ul {
+    /*características lista menu*/
+    list-style: none;
+    position: relative;
+    background-color: #002b80;
+}
+
+.menu ul li {
+    /* características itens do menu*/
+    width: 200px;
+    float: left;
+}
+
+.menu a {
+    /* configurações do link no menu */
+    padding: 15px;
+    display: block;
+    text-decoration: none;
+    /*tirar a linha do link*/
+    text-align: center;
+    background-color: #002b80;
+    color: #FFFFFF;
+}
+
+.menu ul ul {
+    position: absolute;
+    visibility: hidden;
+}
+
+.menu ul li:hover ul {
+    visibility: visible;
+}
+
+.menu a:hover {
+    background-color: #eff0f1;
+    color: #002b80;
+}
+
+.menu ul ul li {
+    float: none;
+}
+
+label[for="btn-menu-responsive"] {
+    padding: 5px;
+    color: #FFFFFF;
+    font-family: 'Lucida Sans';
+    text-align: center;
+    font-size: 30px;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    display: none;
+}
+
+#btn-menu-responsive {
+    display: none;
+}
+
+@media screen and (max-width: 1000px) {
+    .menu ul li {
+        width: 100%;
+        float: none;
+        background-color: #002b80;
+    }
+    .menu ul ul {
+        position: static;
+        overflow: hidden;
+        max-height: 0;
+        transition: all .4s;
+    }
+    .menu ul li:hover ul {
+        height: auto;
+        max-height: 200px;
+    }
+    label[for="btn-menu-responsive"] {
+        display: block;
+    }
+    #btn-menu-responsive:checked~.menu {
+        margin-left: 0px;
+    }
+    .menu {
+        margin-left: -100%;
+        transition: all .4s;
+    }
+    #header {
+        background-color: none;
+    }
+}
+
+.main {
+    padding: 50px 0;
+}
+
+.institution,
+p {
+    text-align: center;
+}
+
+.content {
+    width: 100%;
+    margin: auto;
+    padding: 30px;
+    background-color: #eff0f1;
+    height: 1000px;
+}
+
+.content h1 {
+    margin-bottom: 30px;
+}
+
+.footer {
+    background-color: #eff0f1;
+    text-align: center;
+    width: 100%;
+    padding: 30px;
+}
+
+body {
+    padding-top: 0px;
+    /* Altura do menu */
+}
+
+.header {
+    position: fixed;
+    top: 0;
+}
